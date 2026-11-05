@@ -1,0 +1,755 @@
+{
+  "note": "Facts for supply-chain stakeholders, as checked on 5 November 2026. `status` is what public records show, not a forecast: available means operating or produced; possible means announced, licensed or proven elsewhere; notfound means we found no record, which is not the same as none existing. Possibilities are questions to test, not recommendations.",
+  "asOf": "2026-11-05",
+  "minerals": [
+    {
+      "id": "iron-ore",
+      "chain": {
+        "ground": {
+          "status": "available",
+          "label": "42.5 Mt a year",
+          "note": "2022-23"
+        },
+        "made": {
+          "status": "available",
+          "label": "Steel",
+          "note": "Bhilai, Raigarh, Nagarnar"
+        },
+        "next": {
+          "status": "notfound",
+          "label": "Electrical steel",
+          "note": "No plant found"
+        }
+      },
+      "lead": {
+        "country": "China",
+        "share": 52,
+        "of": "raw steel",
+        "year": "2025",
+        "source": "usgs-iron-steel"
+      },
+      "available": [
+        {
+          "text": "42.5 Mt mined in 2022-23, worth ₹16,994 crore and 16.5% of India's output.",
+          "sources": [
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "Resources of 4,592 Mt of haematite and 106 Mt of magnetite, as of April 2020.",
+          "sources": [
+            "ibm-state-2022"
+          ]
+        },
+        {
+          "text": "Steel is made here. The Indian Bureau of Mines lists Bhilai at 3.9 Mt of crude steel. NMDC's 3 Mt Nagarnar plant sits about 100 km from the Bailadila mines.",
+          "sources": [
+            "ibm-state-2022",
+            "nmdc-steel"
+          ]
+        }
+      ],
+      "possible": [
+        {
+          "text": "Electrical steel. India made about 50,000 t against demand of about 400,000 t in FY2024. The Indian Bureau of Mines lists no plant in the state.",
+          "sources": [
+            "crgo-gtri",
+            "ibm-state-2022"
+          ]
+        },
+        {
+          "text": "Battery cathodes. LFP uses iron and made up over 55% of EV batteries deployed worldwide in 2025. Production of LFP cathodes is still almost entirely in China. We found no cathode plant in the state.",
+          "sources": [
+            "iea-lfp"
+          ]
+        }
+      ],
+      "risky": [
+        {
+          "text": "One mineral carries the state: iron ore is 87% of non-fuel mineral value in 2022-23.",
+          "sources": [
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "Steel entering the EU has faced its carbon charge (CBAM) since January 2026. In 2022, 27% of India's iron, steel and aluminium product exports went to the EU.",
+          "sources": [
+            "eu-cbam",
+            "cbam-gtri"
+          ]
+        },
+        {
+          "text": "Protests over Deposit 13 closed five existing Bailadila mines for six days in June 2019, and the state stopped pre-mining work on the deposit itself. 29 residents told the enquiry their thumb impressions on a Gram Sabha consent were forged.",
+          "sources": [
+            "dep13-resume",
+            "dep13-stay",
+            "dep13-scroll"
+          ]
+        }
+      ],
+      "tiles": {
+        "possible": {
+          "big": "Electrical steel",
+          "small": "India makes only 1/8 of what it needs"
+        },
+        "risky": {
+          "ground": {
+            "big": "Reliance on one mineral",
+            "small": "Iron ore is 87% of non-fuel mineral value"
+          },
+          "made": {
+            "big": "EU carbon charge",
+            "small": "Applies to steel imports since January 2026"
+          }
+        }
+      }
+    },
+    {
+      "id": "coal",
+      "chain": {
+        "ground": {
+          "status": "available",
+          "label": "185 Mt a year",
+          "note": "2022-23"
+        },
+        "made": {
+          "status": "available",
+          "label": "Electricity",
+          "note": "NTPC Korba, 2,600 MW"
+        },
+        "next": {
+          "status": "notfound",
+          "label": "Graphite anodes",
+          "note": "No plant found"
+        }
+      },
+      "lead": {
+        "country": "China",
+        "share": 78,
+        "of": "natural graphite",
+        "year": "2025",
+        "source": "usgs-graphite"
+      },
+      "available": [
+        {
+          "text": "185 Mt mined in 2022-23. The Indian Bureau of Mines publishes no value for fuel minerals.",
+          "sources": [
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "85,263 Mt of resources as of April 2025.",
+          "sources": [
+            "coal-directory"
+          ]
+        },
+        {
+          "text": "NTPC's coal plant at Korba has 2,600 MW installed.",
+          "sources": [
+            "ntpc-korba"
+          ]
+        }
+      ],
+      "possible": [
+        {
+          "text": "Data-centre demand nearby. RackBank's AI park at Nava Raipur was announced with 80 MW in its first phase, and the operator now talks of 500 MW by 2027. A tracker has listed it as under construction since May 2025, with 160 MW at full build-out.",
+          "sources": [
+            "rackbank-dcd",
+            "rackbank-site",
+            "rackbank-tracker"
+          ]
+        },
+        {
+          "text": "Battery anodes from coal tar. Tata Steel reports a pilot of 1 t a year, outside this state. Most needle coke has come from petroleum.",
+          "sources": [
+            "tata-needle-coke"
+          ]
+        }
+      ],
+      "risky": [
+        {
+          "text": "Almost none of it is steelmaking coal: about 0.5% of resources are coking grades.",
+          "sources": [
+            "coal-directory"
+          ]
+        },
+        {
+          "text": "Hasdeo Arand is contested. Villagers were reported protesting in January 2026, and campaigners criticised a state forest department decision on 1,740 ha for Kente Extension in August 2025.",
+          "sources": [
+            "hasdeo-2026",
+            "hasdeo-2025"
+          ]
+        }
+      ],
+      "tiles": {
+        "possible": {
+          "big": "Graphite anodes",
+          "small": "Tata Steel has piloted them from coal tar, elsewhere"
+        },
+        "risky": {
+          "ground": {
+            "big": "Land dispute",
+            "small": "Protests at Hasdeo Arand, reported in 2026"
+          },
+          "made": {
+            "big": "Little steelmaking coal",
+            "small": "About 0.5% of resources are coking grades"
+          }
+        }
+      }
+    },
+    {
+      "id": "tin",
+      "chain": {
+        "ground": {
+          "status": "available",
+          "label": "45 t a year",
+          "note": "2022-23, concentrates"
+        },
+        "made": {
+          "status": "available",
+          "label": "Tin metal",
+          "note": "17 t, Jagdalpur"
+        },
+        "next": {
+          "status": "notfound",
+          "label": "Solder, chipmaking tin",
+          "note": "No plant found"
+        }
+      },
+      "lead": {
+        "country": "China",
+        "share": 24,
+        "of": "tin mine output",
+        "year": "2025",
+        "source": "usgs-tin"
+      },
+      "available": [
+        {
+          "text": "India's sole producer of tin concentrates: 45 t in 2022-23, up from 26 t.",
+          "sources": [
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "36% of India's tin ore resources. The state's geology directorate puts recoverable cassiterite at 19,545 t.",
+          "sources": [
+            "ibm-tin-2022"
+          ]
+        },
+        {
+          "text": "One smelter: Precious Minerals and Smelting at Jagdalpur made 17 t of metal in 2022-23, up from 4.9 t.",
+          "sources": [
+            "imyb-2023"
+          ]
+        }
+      ],
+      "possible": [
+        {
+          "text": "Replacing imports. India imported 13,507 t of tin and alloys in 2022-23, against that 17 t.",
+          "sources": [
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "New deposits. In April 2025 the state gave the Centre reports on three tin deposits for e-auction, in Dantewada, Sukma and Bastar districts. A tin ore block in Sukma and Bastar, Chittalnar-Kumakoleng, was auctioned in January 2026, with Harban Singh & Sons Enterprises named preferred bidder.",
+          "sources": [
+            "tin-deposits",
+            "mstc-nit-6",
+            "mstc-critical-results"
+          ]
+        },
+        {
+          "text": "Strategic pull. Tin is on India's critical list, and the most advanced chip machines make their light from tin droplets.",
+          "sources": [
+            "india-critical",
+            "euv-tin"
+          ]
+        }
+      ],
+      "risky": [
+        {
+          "text": "Scale. 45 t of concentrates against about 290,000 t of world mine output. The two are not measured identically, but the gap is not close.",
+          "sources": [
+            "imyb-2023",
+            "usgs-tin"
+          ]
+        },
+        {
+          "text": "Traceability. The state's mineral corporation buys concentrates from tribal collectors in its lease area. A Tin portal launched in August 2026 aims at fairer prices.",
+          "sources": [
+            "ibm-tin-2022",
+            "outlook-critical"
+          ]
+        },
+        {
+          "text": "Due diligence. EU conflict minerals rules cover tin from conflict-affected and high-risk areas. Buyers should ask how Bastar is classed. We do not classify it.",
+          "sources": [
+            "eu-conflict-minerals"
+          ]
+        }
+      ],
+      "tiles": {
+        "possible": {
+          "big": "Solder, chipmaking tin",
+          "small": "India imported 13,507 t of tin and alloys in 2022-23"
+        },
+        "risky": {
+          "ground": {
+            "big": "Very small output",
+            "small": "45 t a year, against 290,000 t worldwide"
+          },
+          "made": {
+            "big": "Traceability to check",
+            "small": "Concentrates are bought from tribal collectors"
+          }
+        }
+      }
+    },
+    {
+      "id": "bauxite",
+      "chain": {
+        "ground": {
+          "status": "available",
+          "label": "1.06 Mt a year",
+          "note": "2022-23"
+        },
+        "made": {
+          "status": "available",
+          "label": "Aluminium",
+          "note": "BALCO, Korba"
+        },
+        "next": {
+          "status": "possible",
+          "label": "Gallium nitride chips",
+          "note": "Plant announced, start not confirmed"
+        }
+      },
+      "lead": {
+        "country": "China",
+        "share": 99,
+        "of": "primary gallium",
+        "year": "2025",
+        "source": "usgs-gallium"
+      },
+      "available": [
+        {
+          "text": "1.06 Mt from 13 mines in 2022-23, worth ₹125 crore, from 993 Mt of resources.",
+          "sources": [
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "BALCO's Korba smelter made first metal from a new 525 kA line in October 2025, in an expansion to 1 Mt a year.",
+          "sources": [
+            "balco-2025"
+          ]
+        }
+      ],
+      "possible": [
+        {
+          "text": "Gallium nitride chips. Polymatech laid the foundation for a ₹1,143 crore plant at Nava Raipur in April 2025 and targeted production by mid-2026. We found no confirmation it has started.",
+          "sources": [
+            "polymatech-foundation",
+            "polymatech-target"
+          ]
+        },
+        {
+          "text": "Gallium recovery. Gallium comes from alumina refining. The IEA estimates data centres could need over 10% of today's gallium supply in 2030. NALCO plans India's first recovery, 10 t a year, in Odisha. The Indian Bureau of Mines listed Korba's alumina plant as non-operational.",
+          "sources": [
+            "usgs-gallium",
+            "iea-energy-summary",
+            "nalco-gallium",
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "The state names Balrampur for gallium, graphite and vanadium potential. That is a government statement, not a resource estimate. A block listing gallium with bauxite, Sabag (North), is in the latest national auction round.",
+          "sources": [
+            "hitavada-value-chain",
+            "mines-tranche-8"
+          ]
+        }
+      ],
+      "risky": [
+        {
+          "text": "Concentration. China makes 99% of primary gallium, 62% of alumina and 61% of aluminium.",
+          "sources": [
+            "usgs-gallium",
+            "usgs-bauxite",
+            "usgs-aluminum"
+          ]
+        },
+        {
+          "text": "Local ore cannot feed the local smelter. 1 Mt of aluminium needs 4 to 6 Mt of bauxite, and the state mined 1.06 Mt. This is our arithmetic.",
+          "sources": [
+            "iai-bauxite",
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "Aluminium entering the EU has faced its carbon charge (CBAM) since January 2026.",
+          "sources": [
+            "eu-cbam"
+          ]
+        }
+      ],
+      "tiles": {
+        "possible": {
+          "big": "Gallium nitride chips",
+          "small": "₹1,143 crore plant announced, start not confirmed"
+        },
+        "risky": {
+          "ground": {
+            "big": "Too little for the smelter",
+            "small": "1.06 Mt mined; a 1 Mt smelter needs 4 to 6 Mt"
+          },
+          "made": {
+            "big": "EU carbon charge",
+            "small": "Applies to aluminium imports since January 2026"
+          }
+        }
+      }
+    },
+    {
+      "id": "limestone",
+      "chain": {
+        "ground": {
+          "status": "available",
+          "label": "44.7 Mt a year",
+          "note": "2022-23"
+        },
+        "made": {
+          "status": "available",
+          "label": "Cement",
+          "note": "More than a dozen units"
+        },
+        "next": {
+          "status": "notfound",
+          "label": "Solar glass",
+          "note": "No plant found"
+        }
+      },
+      "lead": {
+        "country": "China",
+        "share": 45,
+        "of": "cement",
+        "year": "2025",
+        "source": "usgs-cement"
+      },
+      "available": [
+        {
+          "text": "44.7 Mt from 75 mines in 2022-23, worth ₹1,275 crore, from 13,211 Mt of resources.",
+          "sources": [
+            "imyb-2023"
+          ]
+        },
+        {
+          "text": "The Indian Bureau of Mines lists more than a dozen cement units in the state.",
+          "sources": [
+            "ibm-state-2022"
+          ]
+        }
+      ],
+      "possible": [
+        {
+          "text": "Solar glass. Solar cover glass is low in iron, and ordinary limestone can carry too much. One patent avoids it for a purer calcium source. We found no iron data for the state's deposits, so this needs testing first.",
+          "sources": [
+            "glass-solar"
+          ]
+        },
+        {
+          "text": "New leases. Laladhurwa-Jognipali and Sandi were auctioned as limestone mining leases in 2022-23.",
+          "sources": [
+            "imyb-2023"
+          ]
+        }
+      ],
+      "risky": [
+        {
+          "text": "On neither the EU's nor India's critical list.",
+          "sources": [
+            "eu-annex-ii",
+            "india-critical"
+          ]
+        },
+        {
+          "text": "Cement entering the EU has faced its carbon charge (CBAM) since January 2026.",
+          "sources": [
+            "eu-cbam"
+          ]
+        }
+      ],
+      "tiles": {
+        "possible": {
+          "big": "Solar glass",
+          "small": "Purity matters. We found no iron data for local limestone"
+        },
+        "risky": {
+          "ground": {
+            "big": "Not a critical mineral",
+            "small": "On neither the EU's nor India's list"
+          },
+          "made": {
+            "big": "EU carbon charge",
+            "small": "Applies to cement imports since January 2026"
+          }
+        }
+      }
+    },
+    {
+      "id": "dolomite",
+      "chain": {
+        "ground": {
+          "status": "available",
+          "label": "11% of India's resources",
+          "note": "Output not published"
+        },
+        "made": {
+          "status": "notfound",
+          "label": "Magnesium metal",
+          "note": "No plant found"
+        },
+        "next": {
+          "status": "notfound",
+          "label": "Magnesium alloys",
+          "note": "No plant found"
+        }
+      },
+      "lead": {
+        "country": "China",
+        "share": 86,
+        "of": "magnesium metal",
+        "year": "2025",
+        "source": "usgs-magnesium"
+      },
+      "available": [
+        {
+          "text": "11% of India's dolomite resources, and the Indian Bureau of Mines counts the state among the leading producers.",
+          "sources": [
+            "ibm-state-2022"
+          ]
+        },
+        {
+          "text": "The Indian Bureau of Mines' production table has no dolomite row, so we show no output figure.",
+          "sources": [
+            "ibm-state-2022"
+          ]
+        }
+      ],
+      "possible": [
+        {
+          "text": "Magnesium metal. The Pidgeon process makes it from calcined dolomite. USGS names no Indian producer, and we found no plant in the state.",
+          "sources": [
+            "gtk-magnesium",
+            "usgs-magnesium"
+          ]
+        },
+        {
+          "text": "Flat glass. Dolomite is a standard ingredient. We found no grade data for the state's deposits.",
+          "sources": [
+            "glass-batch"
+          ]
+        }
+      ],
+      "risky": [
+        {
+          "text": "Concentration. China makes 86% of the world's magnesium metal.",
+          "sources": [
+            "usgs-magnesium"
+          ]
+        },
+        {
+          "text": "Thin data. We found no published output, grade or buyer for the state's dolomite.",
+          "sources": [
+            "ibm-state-2022"
+          ]
+        }
+      ],
+      "tiles": {
+        "possible": {
+          "big": "Magnesium and its alloys",
+          "small": "US Geological Survey lists no Indian magnesium producer"
+        },
+        "risky": {
+          "ground": {
+            "big": "No output data",
+            "small": "None published that we could find"
+          },
+          "made": {
+            "big": "No plant found",
+            "small": "For magnesium metal"
+          }
+        }
+      }
+    }
+  ],
+  "acrossAll": [
+    {
+      "icon": "border",
+      "title": "EU carbon charge",
+      "text": "The EU's charge on imports (CBAM) has applied in full since 1 January 2026. It covers iron and steel, aluminium, cement, fertilisers, electricity and hydrogen.",
+      "sources": [
+        "eu-cbam"
+      ]
+    },
+    {
+      "icon": "people",
+      "title": "Land and consent",
+      "text": "Protests closed five Bailadila mines for six days in 2019, and land disputes continue at Hasdeo Arand. India's first lithium block is a third forest: 85 of 256 ha.",
+      "sources": [
+        "dep13-resume",
+        "hasdeo-2026",
+        "katghora"
+      ]
+    },
+    {
+      "icon": "shield",
+      "title": "Security",
+      "text": "India's Home Minister declared Bastar Naxal-free in May 2026. Police name de-mining and development as the remaining work. These are official statements.",
+      "sources": [
+        "bastar-declared",
+        "bastar-demining"
+      ]
+    },
+    {
+      "icon": "clock",
+      "title": "Data age",
+      "text": "The best state-level production figures are from 2022-23. No public source traces ore from mine to plant to buyer.",
+      "sources": [
+        "imyb-2023"
+      ]
+    }
+  ],
+  "watchlist": {
+    "intro": "Beyond the six. The state says 65 mineral blocks have been auctioned. In July 2026 the Centre cancelled nine critical-mineral auctions from the previous round, citing poor investor response and a lack of qualified bidders.",
+    "sources": [
+      "outlook-critical",
+      "auctions-cancelled"
+    ],
+    "items": [
+      {
+        "name": "Lithium",
+        "place": "Katghora, Korba",
+        "text": "India's first lithium-bearing block to be auctioned. Reported grades are modest.",
+        "sources": [
+          "katghora",
+          "katghora-ken"
+        ]
+      },
+      {
+        "name": "Graphite",
+        "place": "Kennapara, Murka Basera",
+        "text": "Composite licences auctioned in March 2023.",
+        "sources": [
+          "imyb-2023"
+        ]
+      },
+      {
+        "name": "Nickel, chromium, PGE",
+        "place": "Kelwardabri, Bhalukona-Jamnidih",
+        "text": "Composite licences auctioned in 2022-23.",
+        "sources": [
+          "imyb-2023"
+        ]
+      },
+      {
+        "name": "Rare earths",
+        "place": "Mahasamund",
+        "text": "Reconnaissance by the Geological Survey of India in 2021-22.",
+        "sources": [
+          "ibm-state-2022"
+        ]
+      },
+      {
+        "name": "Fluorite",
+        "place": "Rajnandgaon",
+        "text": "545,455 t of resources. Fluorspar is on the EU's critical list.",
+        "sources": [
+          "ibm-state-2022",
+          "eu-annex-ii"
+        ]
+      }
+    ],
+    "auction": {
+      "title": "Five Chhattisgarh blocks in the latest national auction round",
+      "intro": "Tranche VIII was notified on 15 July 2026, and auctions began on 15 October. On 5 November 2026 the results page listed 8 of the round's 20 blocks, one of them here. It does not say why the others are missing. Being named preferred bidder is not the same as being granted the licence.",
+      "sources": [
+        "mstc-nit-8",
+        "mstc-critical-results"
+      ],
+      "blocks": [
+        {
+          "name": "Gohirapali",
+          "minerals": "Glauconite sandstone",
+          "licence": "Composite licence",
+          "attempt": "First attempt",
+          "result": "No result listed"
+        },
+        {
+          "name": "Sabag (North)",
+          "minerals": "Vanadium, gallium, titanium, rare earths, bauxite, aluminous laterite",
+          "licence": "Composite licence",
+          "attempt": "First attempt",
+          "result": "No result listed"
+        },
+        {
+          "name": "Sambalpur",
+          "minerals": "Phosphorite and limestone",
+          "licence": "Mining lease",
+          "attempt": "First attempt",
+          "result": "No result listed"
+        },
+        {
+          "name": "Gurur",
+          "minerals": "Glauconitic sandstone",
+          "licence": "Composite licence",
+          "attempt": "Second attempt",
+          "result": "Preferred bidder: AMPL Minerals Private Limited. Final offer 15.20 against a 15.15% reserve."
+        },
+        {
+          "name": "Karahibhadar",
+          "minerals": "Glauconitic sandstone",
+          "licence": "Composite licence",
+          "attempt": "Second attempt",
+          "result": "No result listed"
+        }
+      ]
+    },
+    "winners": {
+      "title": "18 Chhattisgarh blocks with a preferred bidder since April 2025",
+      "intro": "Every Chhattisgarh result in MSTC's tables for 2025-26 and 2026-27, as listed on 5 November 2026, newest first. A preferred bidder has not necessarily been granted the licence. The tables give no unit for the final offer, so we leave offers out.",
+      "sources": [
+        "mstc-critical-results",
+        "mstc-state-results"
+      ],
+      "rows": [
+        { "block": "Gurur", "minerals": "Glauconite", "bidder": "AMPL Minerals Private Limited", "began": "2026-10-15", "by": "Ministry of Mines" },
+        { "block": "Dindo Belkurta Basera", "minerals": "Graphite", "bidder": "Shri Mahakaal Infrastructure", "began": "2026-06-16", "by": "Ministry of Mines" },
+        { "block": "Khara A and B", "minerals": "Iron ore", "bidder": "Shree Shyam Mineral Corporation", "began": "2026-05-28", "by": "State" },
+        { "block": "Karankhol Rachpalpur", "minerals": "Gold and associated base metal", "bidder": "R K Mineral Development Private Limited", "began": "2026-05-20", "by": "State" },
+        { "block": "Chittalnar-Kumakoleng", "minerals": "Tin ore", "bidder": "Harban Singh & Sons Enterprises Private Limited", "began": "2026-01-19", "by": "Ministry of Mines" },
+        { "block": "Gopaltola", "minerals": "Iron ore", "bidder": "Zodiac Dealers Private Limited", "began": "2026-01-13", "by": "State" },
+        { "block": "Dandkesra North Extension", "minerals": "Bauxite", "bidder": "Maa Kudargarhi Steels Private Limited", "began": "2025-09-02", "by": "State" },
+        { "block": "Kuniya", "minerals": "Bauxite", "bidder": "Maa Kudargarhi Steels Private Limited", "began": "2025-09-01", "by": "State" },
+        { "block": "Murtadand", "minerals": "Bauxite", "bidder": "Shri Mahakaal Infrastructure", "began": "2025-08-29", "by": "State" },
+        { "block": "Nachaniya", "minerals": "Iron ore", "bidder": "ALPS Mining Services Private Limited", "began": "2025-08-28", "by": "State" },
+        { "block": "Bhajidongari", "minerals": "Iron ore", "bidder": "Sagar Stone Industries", "began": "2025-08-27", "by": "State" },
+        { "block": "Sarseni Guma West", "minerals": "Limestone", "bidder": "Feegrade & Company Private Limited", "began": "2025-08-25", "by": "State" },
+        { "block": "Sarseni Guma East", "minerals": "Limestone", "bidder": "Feegrade & Company Private Limited", "began": "2025-08-22", "by": "State" },
+        { "block": "Hirmi II South", "minerals": "Limestone", "bidder": "UltraTech Cement Limited", "began": "2025-08-21", "by": "State" },
+        { "block": "Hirmi II North", "minerals": "Limestone", "bidder": "UltraTech Cement Limited", "began": "2025-08-20", "by": "State" },
+        { "block": "Oranga-Revatipur", "minerals": "Graphite and vanadium", "bidder": "Coal India Limited", "began": "2025-05-16", "by": "Ministry of Mines" },
+        { "block": "Raipura", "minerals": "Phosphorite and limestone", "bidder": "NLC India Limited", "began": "2025-05-16", "by": "Ministry of Mines" },
+        { "block": "Semhardih", "minerals": "Phosphorite and limestone", "bidder": "NLC India Limited", "began": "2025-05-15", "by": "Ministry of Mines" }
+      ]
+    }
+  },
+  "unknowns": [
+    "Where the state's ore actually goes: mine, plant and buyer.",
+    "Output after 2022-23, mine by mine.",
+    "The result for four of the five blocks in the latest national auction round.",
+    "Whether the Nava Raipur chip plant and AI park are operating today.",
+    "Grades, prices and contract terms."
+  ]
+}

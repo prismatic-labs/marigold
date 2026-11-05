@@ -1,0 +1,383 @@
+---
+import Layout from "./Layout.astro";
+import StatusIcon from "./StatusIcon.astro";
+import Ground from "./Ground.astro";
+import { minerals, sourceById, supply } from "../lib/data";
+
+const nameOf = (id: string) => minerals.list.find((m) => m.id === id)!;
+const checked = new Date(supply.asOf).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+const began = (iso: string) => new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+const words = ["None", "One", "Two", "Three", "Four", "Five", "Six"];
+const reachProduct = supply.minerals.filter((m) => m.chain.made.status === "available").length;
+const shares = supply.minerals.map((m) => m.lead.share);
+const lowest = supply.minerals.find((m) => m.lead.share === Math.min(...shares))!;
+const highest = supply.minerals.find((m) => m.lead.share === Math.max(...shares))!;
+const shortName: Record<string, string> = { "tin mine output": "tin", "primary gallium": "gallium" };
+const line = {
+  available: `All six are mined here. ${words[reachProduct]} are also processed here. We found none yet making the products on the right.`,
+  possible: "Six products worth testing here. One already has a plant announced.",
+  risky: `China is the top producer in all six chains, from ${lowest.lead.share}% of ${shortName[lowest.lead.of]} to ${highest.lead.share}% of ${shortName[highest.lead.of]}.`,
+};
+const guide = {
+  available: "Orange: exists here today. Striped: announced. Grey: we found no plant, which is not proof there is none. Mt: million tonnes.",
+  possible: "Blue: a product worth testing here, and why. This is not a forecast.",
+  risky: "Slate: a consideration for that chain. The bar shows the top producer's share of world output of the product named.",
+};
+const lenses = [
+  { key: "available", title: "Here now" },
+  { key: "possible", title: "Could be built" },
+  { key: "risky", title: "Key considerations" },
+] as const;
+const icons: Record<string, string> = {
+  border: "M16 4v24M4 10h8M4 16h8M4 22h8M20 10l4 3-4 3M20 19l4 3-4 3",
+  people: "M11 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM21 14a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM4 26c0-5 3-8 7-8s7 3 7 8M19 18c5-1 9 2 9 8",
+  shield: "M16 4l10 4v8c0 6-4 10-10 12C10 26 6 22 6 16V8zM12 16l3 3 5-6",
+  clock: "M16 4a12 12 0 1 0 0 24 12 12 0 0 0 0-24zM16 9v7l5 3",
+};
+---
+
+<Layout>
+  <section class="top" aria-labelledby="supply-title">
+    <h1 id="supply-title"><span>Chhattisgarh could turn its minerals</span> <span class="open">into deep tech.</span></h1>
+    <p class="sub">
+      Six minerals, traced from the ground towards chips, batteries, the grid and solar. Figures: <a href={sourceById("imyb-2023").url}>Indian Bureau of Mines</a>, 2022-23. World shares:
+      <a href={sourceById("usgs-gallium").url}>US Geological Survey</a>, 2025. Checked {checked}.
+    </p>
+
+    <div class="controls">
+      <div class="lens-toggle" role="group" aria-label="What the picture shows">
+        {lenses.map((l, i) => <button type="button" aria-pressed={i === 0 ? "true" : "false"} data-lens={l.key}>{l.title}</button>)}
+      </div>
+      <p id="mode-line" aria-live="polite" data-available={line.available} data-possible={line.possible} data-risky={line.risky}>{line.available}</p>
+    </div>
+
+    <div class="wall" data-lens="available">
+      <div class="heads" aria-hidden="true">
+        <span class="head-el"></span>
+        <span><span class="v" data-v="available">Mined here</span><span class="v" data-v="possible">Mined here</span><span class="v" data-v="risky">In mining</span></span>
+        <span><span class="v" data-v="available">Made here</span><span class="v" data-v="possible">Made here</span><span class="v" data-v="risky">In production</span></span>
+        <span><span class="v" data-v="available">Not yet made here</span><span class="v" data-v="possible">Worth testing here</span><span class="v" data-v="risky">Top producer worldwide</span></span>
+      </div>
+      {
+        supply.minerals.map((m) => (
+          <button type="button" class="wrow" data-m={m.id} aria-label={`${nameOf(m.id).name}: open the detail and sources`}>
+            <span class="el">
+              <span class:list={["sym", nameOf(m.id).symbol.length > 6 && "long"]}>{nameOf(m.id).symbol}</span>
+              <b>{nameOf(m.id).name}</b>
+            </span>
+
+            <span class={`t ground s-${m.chain.ground.status}`}>
+              <span class="v" data-v="available"><b>{m.chain.ground.label}</b><small>{m.chain.ground.note}</small></span>
+              <span class="v" data-v="possible"><b>{m.chain.ground.label}</b><small>{m.chain.ground.note}</small></span>
+              <span class="v" data-v="risky"><b>{m.tiles.risky.ground.big}</b><small>{m.tiles.risky.ground.small}</small></span>
+            </span>
+
+            <span class={`t made s-${m.chain.made.status}`}>
+              <span class="v" data-v="available"><b>{m.chain.made.label}</b><small>{m.chain.made.note}</small></span>
+              <span class="v" data-v="possible"><b>{m.chain.made.label}</b><small>{m.chain.made.note}</small></span>
+              <span class="v" data-v="risky"><b>{m.tiles.risky.made.big}</b><small>{m.tiles.risky.made.small}</small></span>
+            </span>
+
+            <span class={`t next s-${m.chain.next.status}`}>
+              <span class="v" data-v="available"><b>{m.chain.next.label}</b><small>{m.chain.next.note}</small></span>
+              <span class="v" data-v="possible"><b>{m.tiles.possible.big}</b><small>{m.tiles.possible.small}</small></span>
+              <span class="v" data-v="risky">
+                <b>{m.lead.country} {m.lead.share}%</b><small>of {m.lead.of}</small>
+                <i class="meter"><i style={`width:${m.lead.share}%`}></i></i>
+              </span>
+            </span>
+          </button>
+        ))
+      }
+    </div>
+    <p class="guide" id="guide" data-available={guide.available} data-possible={guide.possible} data-risky={guide.risky}>{guide.available} Click a row for the detail and sources.</p>
+  </section>
+
+  {
+    supply.minerals.map((m) => (
+      <dialog id={`d-${m.id}`} class="md" aria-labelledby={`h-${m.id}`}>
+        <form method="dialog" class="close-form"><button class="close" aria-label="Close">×</button></form>
+        <h2 id={`h-${m.id}`}>{nameOf(m.id).name}</h2>
+        <div class="panel">
+          {lenses.map((l) => (
+            <div class={`lens ${l.key}`}>
+              <h3><StatusIcon status={l.key} /> {l.title}</h3>
+              <ul>
+                {m[l.key].map((fact) => (
+                  <li>
+                    {fact.text}{" "}
+                    <span class="refs">
+                      {fact.sources.map((id, n) => (
+                        <>{n > 0 && " · "}<a href={sourceById(id).url}>{sourceById(id).org}</a></>
+                      ))}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </dialog>
+    ))
+  }
+
+  <Ground />
+
+  <section aria-labelledby="across-title">
+    <h2 id="across-title">Four considerations across all six chains</h2>
+    <div class="across">
+      {
+        supply.acrossAll.map((r) => (
+          <article>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d={icons[r.icon]} /></svg>
+            <h3>{r.title}</h3>
+            <p>{r.text}</p>
+            <p class="refs">
+              {r.sources.map((id, n) => (
+                <>{n > 0 && " · "}<a href={sourceById(id).url}>{sourceById(id).org}</a></>
+              ))}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section aria-labelledby="watch-title">
+    <h2 id="watch-title">Also worth watching</h2>
+    <p class="sub">
+      {supply.watchlist.intro}{" "}
+      <span class="refs">{supply.watchlist.sources.map((id, n) => <>{n > 0 && " · "}<a href={sourceById(id).url}>{sourceById(id).org}</a></>)}</span>
+    </p>
+    <dl class="watch">
+      {
+        supply.watchlist.items.map((w) => (
+          <div>
+            <dt>{w.name}</dt>
+            <dd class="place">{w.place}</dd>
+            <dd>
+              {w.text}{" "}
+              <span class="refs">
+                {w.sources.map((id, n) => (
+                  <>{n > 0 && " · "}<a href={sourceById(id).url}>{sourceById(id).org}</a></>
+                ))}
+              </span>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <h3 class="blocks-title">{supply.watchlist.auction.title}</h3>
+    <p class="sub">
+      {supply.watchlist.auction.intro}{" "}
+      <span class="refs">{supply.watchlist.auction.sources.map((id, n) => <>{n > 0 && " · "}<a href={sourceById(id).url}>{sourceById(id).org}</a></>)}</span>
+    </p>
+    <dl class="watch">
+      {
+        supply.watchlist.auction.blocks.map((b) => (
+          <div>
+            <dt>{b.name}</dt>
+            <dd class="place">{b.licence} · {b.attempt}</dd>
+            <dd>{b.minerals}</dd>
+            <dd class="block-result">{b.result}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <h3 class="blocks-title" id="winners-title">{supply.watchlist.winners.title}</h3>
+    <p class="sub">
+      {supply.watchlist.winners.intro}{" "}
+      <span class="refs">{supply.watchlist.winners.sources.map((id, n) => <>{n > 0 && " · "}<a href={sourceById(id).url}>{sourceById(id).org}</a></>)}</span>
+    </p>
+    <table class="winners" aria-labelledby="winners-title">
+      <thead>
+        <tr><th scope="col">Block</th><th scope="col">Mineral</th><th scope="col">Preferred bidder</th><th scope="col">Auction began</th><th scope="col">Auctioned by</th></tr>
+      </thead>
+      <tbody>
+        {
+          supply.watchlist.winners.rows.map((w) => (
+            <tr>
+              <th scope="row">{w.block}</th>
+              <td class="mineral">{w.minerals}</td>
+              <td class="bidder">{w.bidder}</td>
+              <td class="when"><time datetime={w.began}>{began(w.began)}</time></td>
+              <td class="by">{w.by}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="unknown-title" class="unknown">
+    <h2 id="unknown-title">What this cannot tell you</h2>
+    <ul>{supply.unknowns.map((u) => <li>{u}</li>)}</ul>
+    <p class="note">
+      See also <a href="https://prismatic-labs.github.io/alyssum/">Alyssum</a>, our map of who makes the EU's strategic raw materials.
+    </p>
+    <p class="cta">Working on one of these chains? <a href="https://prismaticlabs.ai/contact/">Talk to Prismatic Labs</a></p>
+  </section>
+</Layout>
+
+<script>
+  const wall = document.querySelector<HTMLElement>(".wall")!;
+  const line = document.getElementById("mode-line")!;
+  const guide = document.getElementById("guide")!;
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>(".lens-toggle button")];
+  buttons.forEach((b) =>
+    b.addEventListener("click", () => {
+      const lens = b.dataset.lens!;
+      wall.dataset.lens = lens;
+      buttons.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      line.textContent = line.dataset[lens]!;
+      guide.textContent = `${guide.dataset[lens]} Click a row for the detail and sources.`;
+    }),
+  );
+
+  function open(id: string) {
+    const dialog = document.getElementById(`d-${id}`) as HTMLDialogElement | null;
+    if (!dialog) return;
+    dialog.showModal();
+    history.replaceState(null, "", `#${id}`);
+  }
+  document.querySelectorAll<HTMLButtonElement>(".wrow").forEach((row) => row.addEventListener("click", () => open(row.dataset.m!)));
+  document.querySelectorAll<HTMLDialogElement>("dialog.md").forEach((dialog) => {
+    dialog.addEventListener("click", (ev) => {
+      if (ev.target === dialog) dialog.close();
+    });
+    dialog.addEventListener("close", () => history.replaceState(null, "", location.pathname));
+  });
+  const initial = location.hash.slice(1);
+  if (initial) open(initial);
+</script>
+
+<style>
+  .top h1 { font-size: clamp(1.75rem, 3.9vw, 2.8rem); }
+  .top h1 span { display: block; }
+  .top h1 .open { color: #c76d00; }
+  .top .sub { font-size: 0.85rem; max-width: none; }
+  .top .sub a { color: inherit; }
+
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-top: 1rem; }
+  .lens-toggle { display: inline-flex; flex-shrink: 0; padding: 2px; border: 1.5px solid var(--ink); border-radius: 999px; }
+  .lens-toggle button { padding: 0.15rem 0.95rem; border: 0; border-radius: 999px; background: none; font-weight: 600; cursor: pointer; }
+  .lens-toggle button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .lens-toggle button[data-lens="available"][aria-pressed="true"] { background: var(--marigold); color: var(--ink); }
+  .lens-toggle button[data-lens="possible"][aria-pressed="true"] { background: var(--spent); color: #fff; }
+  .lens-toggle button[data-lens="risky"][aria-pressed="true"] { background: #44505a; color: #fff; }
+  #mode-line { flex: 1 1 24rem; font-size: 1.15rem; font-weight: 800; line-height: 1.25; }
+
+  .wall { --cols: 8.25rem repeat(3, minmax(0, 1fr)); margin-top: 1rem; }
+  .heads { display: grid; grid-template-columns: var(--cols); padding-bottom: 0.25rem; color: var(--muted); font-size: 0.8rem; font-weight: 800; }
+  .heads > span:not(.head-el) { padding-left: 1.1rem; }
+  .wrow { display: grid; grid-template-columns: var(--cols); align-items: stretch; width: 100%; margin: 0 0 5px; padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; }
+  .wrow:hover .el b { text-decoration: underline; text-decoration-color: var(--marigold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .wrow:hover .t { filter: brightness(0.96); }
+  .el { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding-right: 0.5rem; line-height: 1.15; }
+  .el .sym { color: var(--muted); font-size: 1.1rem; }
+  .el .sym.long { font-size: 0.72rem; line-height: 1.5; white-space: nowrap; }
+  .el b { font-weight: 800; }
+
+  .t {
+    position: relative; display: flex; align-items: center; min-width: 0; min-height: 4.1rem; margin-right: -9px;
+    padding: 0.45rem 1.5rem 0.45rem 1.5rem;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%, 14px 50%);
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .t.next { margin-right: 0; }
+  .v { display: none; width: 100%; min-width: 0; }
+  .v b { display: block; font-size: 1.05rem; font-weight: 800; line-height: 1.15; }
+  .v small { display: block; margin-top: 0.1rem; font-size: 0.76rem; line-height: 1.2; }
+  .wall[data-lens="available"] .v[data-v="available"],
+  .wall[data-lens="possible"] .v[data-v="possible"],
+  .wall[data-lens="risky"] .v[data-v="risky"] { display: block; }
+
+  .wall[data-lens="available"] .s-available { background: var(--marigold); color: var(--ink); }
+  .wall[data-lens="available"] .s-possible { background: repeating-linear-gradient(135deg, #f4c078 0 7px, #fbe6c8 7px 14px); color: var(--ink); }
+  .wall[data-lens="available"] .s-notfound { background: #ece8df; color: var(--muted); }
+  .wall[data-lens="available"] .s-notfound b { font-weight: 600; }
+
+  .wall[data-lens="possible"] .t { background: #f0ede5; color: #6b675f; }
+  .wall[data-lens="possible"] .t b { font-weight: 600; }
+  .wall[data-lens="possible"] .t.next { background: var(--spent); color: #fff; }
+  .wall[data-lens="possible"] .t.next b { font-weight: 800; }
+
+  .wall[data-lens="risky"] .t { background: #e6e9ea; color: var(--ink); }
+  .wall[data-lens="risky"] .t.next { background: #d3d9dc; }
+  .wall[data-lens="risky"] .t.next b { color: #2c363e; font-size: 1.2rem; }
+  .meter { display: block; height: 7px; margin-top: 0.25rem; margin-right: 0.25rem; border-radius: 4px; background: rgba(255, 255, 255, 0.75); overflow: hidden; }
+  .meter i { display: block; height: 100%; border-radius: 4px; background: #44505a; }
+
+  .guide { margin-top: 0.4rem; color: var(--muted); font-size: 0.82rem; }
+
+  .md { width: min(62rem, 94vw); max-height: 90vh; margin: auto; padding: clamp(1.1rem, 2.5vw, 2rem); border: 0; border-radius: 8px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 80px rgba(26, 25, 22, 0.35); }
+  .md::backdrop { background: rgba(26, 25, 22, 0.45); }
+  .close-form { position: absolute; top: 0.6rem; right: 0.6rem; }
+  .close { padding: 0.1rem 0.6rem; border: 0; background: none; font-size: 1.7rem; line-height: 1; cursor: pointer; }
+  .panel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem 2rem; margin-top: 0.75rem; }
+  .lens h3 { display: flex; align-items: center; gap: 0.4rem; }
+  .lens ul { margin: 0.3rem 0 0; padding: 0; list-style: none; }
+  .lens li { margin-top: 0.6rem; font-size: 0.95rem; line-height: 1.4; }
+  .refs { color: var(--muted); font-size: 0.78rem; white-space: normal; }
+  .note { margin-top: 0.9rem; max-width: 46rem; color: var(--muted); font-size: 0.85rem; }
+
+  .across { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.25rem; }
+  .across article { display: flex; flex-direction: column; }
+  .across svg { width: 2.5rem; height: 2.5rem; fill: none; stroke: #44505a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .across h3 { margin-top: 0.3rem; }
+  .across p { margin-top: 0.2rem; font-size: 0.9rem; line-height: 1.4; }
+  .across .refs { margin-top: auto; padding-top: 0.5rem; font-size: 0.78rem; }
+
+  .watch { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.25rem; margin: 1.25rem 0 0; }
+  dt { font-weight: 800; }
+  dd { margin: 0; font-size: 0.95rem; line-height: 1.4; }
+  .place { color: var(--muted); font-size: 0.85rem; }
+  .blocks-title { margin-top: 2rem; font-size: 1.15rem; }
+  .block-result { margin-top: 0.35rem; font-size: 0.85rem; font-weight: 600; }
+
+  .winners { width: 100%; margin-top: 1rem; border-collapse: collapse; font-size: 0.9rem; line-height: 1.35; }
+  .winners th, .winners td { padding: 0.4rem 1rem 0.4rem 0; border-top: 1px solid var(--line); text-align: left; vertical-align: baseline; }
+  .winners thead th { border-top: 0; color: var(--muted); font-size: 0.78rem; font-weight: 600; }
+  .winners tbody th { font-weight: 800; }
+  .winners .when, .winners .by { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+  .winners .by { padding-right: 0; }
+
+  .unknown ul { margin: 0.75rem 0 0; padding-left: 1.25rem; max-width: 46rem; }
+  .unknown li { margin-top: 0.25rem; }
+  .cta { margin-top: 1.25rem; font-size: 1.15rem; font-weight: 800; }
+
+  @media (max-width: 60rem) {
+    .across, .watch { grid-template-columns: minmax(0, 1fr); }
+    .across article { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 0.75rem; }
+    .across svg { grid-row: 1 / span 3; }
+    .across h3 { margin-top: 0; }
+    .across p { grid-column: 2; }
+  }
+
+  @media (max-width: 48rem) {
+    .wall { --cols: repeat(3, minmax(0, 1fr)); }
+    .head-el { display: none; }
+    .heads > span:not(.head-el) { padding-left: 0.7rem; font-size: 0.72rem; }
+    .el { grid-column: 1 / -1; flex-direction: row; align-items: baseline; justify-content: flex-start; gap: 0.4rem; margin-top: 0.35rem; margin-bottom: 0.15rem; padding: 0; }
+    .el .sym { font-size: 0.8rem; order: 2; }
+    .el .sym.long { font-size: 0.7rem; }
+    .t { min-height: 4.6rem; margin-right: -5px; padding: 0.35rem 0.75rem 0.35rem 0.8rem; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%); }
+    .v b { font-size: 0.86rem; }
+    .v small { font-size: 0.66rem; }
+    .wall[data-lens="risky"] .t.next b { font-size: 0.92rem; }
+    .panel { grid-template-columns: minmax(0, 1fr); }
+    #mode-line { flex-basis: 100%; }
+    .lens-toggle button { padding: 0.15rem 0.6rem; font-size: 0.86rem; white-space: nowrap; }
+    .winners thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .winners, .winners tbody { display: block; }
+    .winners tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 0.75rem; padding: 0.5rem 0; border-top: 1px solid var(--line); }
+    .winners tbody th, .winners tbody td { padding: 0; border: 0; }
+    .winners .when, .winners .by { font-size: 0.8rem; text-align: right; }
+    .winners .mineral { grid-column: 1; grid-row: 2; color: var(--muted); }
+    .winners .bidder { grid-column: 1 / -1; grid-row: 3; }
+    .winners .when { grid-column: 2; grid-row: 1; }
+    .winners .by { grid-column: 2; grid-row: 2; }
+  }
+</style>

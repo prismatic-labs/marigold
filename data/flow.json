@@ -1,0 +1,283 @@
+{
+  "note": "General industry links, each with its own source. They show what a mineral can become. They do not trace Chhattisgarh's ore to any plant, product or buyer. `inState` means a source on this page records that material being made in Chhattisgarh.",
+  "materials": [
+    {
+      "id": "steel",
+      "inState": true,
+      "label": "Steel"
+    },
+    {
+      "id": "magnets",
+      "label": "Neodymium magnets"
+    },
+    {
+      "id": "lfp",
+      "label": "LFP cathode"
+    },
+    {
+      "id": "graphite",
+      "label": "Graphite anode"
+    },
+    {
+      "id": "silicon",
+      "label": "Silicon metal"
+    },
+    {
+      "id": "power",
+      "label": "Electricity",
+      "inState": true
+    },
+    {
+      "id": "solder",
+      "label": "Solder"
+    },
+    {
+      "id": "euv",
+      "label": "EUV light"
+    },
+    {
+      "id": "gallium",
+      "label": "Gallium"
+    },
+    {
+      "id": "aluminium",
+      "inState": true,
+      "label": "Aluminium"
+    },
+    {
+      "id": "cement",
+      "inState": true,
+      "label": "Cement"
+    },
+    {
+      "id": "glass",
+      "label": "Flat glass"
+    },
+    {
+      "id": "magnesium",
+      "label": "Magnesium"
+    }
+  ],
+  "uses": [
+    {
+      "id": "chips",
+      "label": "Chips and AI"
+    },
+    {
+      "id": "batteries",
+      "label": "Batteries"
+    },
+    {
+      "id": "datacentres",
+      "label": "Data centres and the grid"
+    },
+    {
+      "id": "motion",
+      "label": "EVs, robots, aircraft"
+    },
+    {
+      "id": "solar",
+      "label": "Solar power"
+    }
+  ],
+  "edges": [
+    {
+      "from": "iron-ore",
+      "to": "steel",
+      "source": "usgs-iron-ore",
+      "text": "Almost all iron ore goes to steelmaking: 98% of US shipments."
+    },
+    {
+      "from": "iron-ore",
+      "to": "magnets",
+      "source": "doe-magnets",
+      "text": "Most of a neodymium magnet's weight is iron."
+    },
+    {
+      "from": "iron-ore",
+      "to": "lfp",
+      "source": "iea-lfp",
+      "text": "LFP means lithium iron phosphate: the battery's cathode contains iron."
+    },
+    {
+      "from": "coal",
+      "to": "steel",
+      "source": "usgs-iron-steel",
+      "text": "Integrated steel mills use metallurgical coke made from coal."
+    },
+    {
+      "from": "coal",
+      "to": "graphite",
+      "source": "tata-needle-coke",
+      "text": "Coal tar can become needle coke, then battery anode material. Tata Steel reports a pilot plant."
+    },
+    {
+      "from": "coal",
+      "to": "silicon",
+      "source": "silicon-carbon",
+      "text": "Silicon metal is made by reducing quartz with carbon, and coal is one of the carbon sources."
+    },
+    {
+      "from": "coal",
+      "to": "power",
+      "source": "iea-energy-supply",
+      "text": "In 2024 coal was the largest single source of electricity for data centres worldwide, about 30%. In India, the IEA projects renewables will overtake it by 2035."
+    },
+    {
+      "from": "tin",
+      "to": "solder",
+      "source": "usgs-tin",
+      "text": "Solder is one of tin's main uses: 11% of US use."
+    },
+    {
+      "from": "tin",
+      "to": "euv",
+      "source": "euv-tin",
+      "text": "Machines that print the most advanced chips make their light by firing lasers at droplets of molten tin."
+    },
+    {
+      "from": "tin",
+      "to": "glass",
+      "source": "glass-batch",
+      "text": "Flat glass is made by floating molten glass on a bath of molten tin."
+    },
+    {
+      "from": "bauxite",
+      "to": "aluminium",
+      "source": "usgs-bauxite",
+      "text": "Bauxite is refined into alumina, and most alumina is smelted into aluminium."
+    },
+    {
+      "from": "bauxite",
+      "to": "gallium",
+      "source": "usgs-gallium",
+      "text": "Gallium is mostly recovered as a by-product of processing bauxite."
+    },
+    {
+      "from": "bauxite",
+      "to": "cement",
+      "source": "usgs-bauxite",
+      "text": "Some bauxite goes into cement."
+    },
+    {
+      "from": "limestone",
+      "to": "steel",
+      "source": "usgs-lime",
+      "text": "Steelmaking is the largest market for lime, which is made from limestone."
+    },
+    {
+      "from": "limestone",
+      "to": "cement",
+      "source": "usgs-cement",
+      "text": "Limestone goes into cement, including portland-limestone cement."
+    },
+    {
+      "from": "limestone",
+      "to": "glass",
+      "source": "glass-batch",
+      "text": "Limestone is a standard ingredient of flat glass."
+    },
+    {
+      "from": "dolomite",
+      "to": "steel",
+      "source": "usgs-lime",
+      "text": "Dolomitic lime is used as a flux in steelmaking."
+    },
+    {
+      "from": "dolomite",
+      "to": "glass",
+      "source": "glass-batch",
+      "text": "Dolomite is a standard ingredient of flat glass."
+    },
+    {
+      "from": "dolomite",
+      "to": "magnesium",
+      "source": "gtk-magnesium",
+      "text": "The Pidgeon process makes magnesium metal from calcined dolomite."
+    },
+    {
+      "from": "steel",
+      "to": "datacentres",
+      "source": "power-electrical-steel",
+      "text": "Transformers need grain-oriented electrical steel, and shortages have held up grid equipment."
+    },
+    {
+      "from": "magnets",
+      "to": "motion",
+      "source": "doe-magnets",
+      "text": "These magnets go into motors for electric vehicles and machines."
+    },
+    {
+      "from": "lfp",
+      "to": "batteries",
+      "source": "iea-lfp",
+      "text": "LFP made up over 55% of EV batteries deployed worldwide in 2025, up from nearly 50% in 2024."
+    },
+    {
+      "from": "graphite",
+      "to": "batteries",
+      "source": "posco-anode",
+      "text": "Artificial graphite is a common lithium-ion battery anode."
+    },
+    {
+      "from": "silicon",
+      "to": "chips",
+      "source": "usgs-silicon",
+      "text": "Silicon metal can be purified into semiconductor-grade polysilicon."
+    },
+    {
+      "from": "silicon",
+      "to": "solar",
+      "source": "usgs-silicon",
+      "text": "It can also be purified into solar-grade polysilicon."
+    },
+    {
+      "from": "power",
+      "to": "datacentres",
+      "source": "iea-energy-demand",
+      "text": "In the IEA's base case, data centres use about 945 TWh by 2030, up from about 415 TWh in 2024."
+    },
+    {
+      "from": "solder",
+      "to": "chips",
+      "source": "usgs-tin-myb",
+      "text": "Solder joins components on the circuit boards of electronic devices."
+    },
+    {
+      "from": "euv",
+      "to": "chips",
+      "source": "euv-tin",
+      "text": "EUV light at 13.5 nm is how the smallest chip features are printed."
+    },
+    {
+      "from": "gallium",
+      "to": "chips",
+      "source": "usgs-gallium",
+      "text": "Gallium arsenide and gallium nitride make chips and light devices: 73% of US gallium goes to chips."
+    },
+    {
+      "from": "aluminium",
+      "to": "motion",
+      "source": "usgs-aluminum",
+      "text": "Transport is aluminium's largest use: 36% of US use."
+    },
+    {
+      "from": "aluminium",
+      "to": "datacentres",
+      "source": "usgs-aluminum",
+      "text": "Electrical uses take 9% of US aluminium."
+    },
+    {
+      "from": "glass",
+      "to": "solar",
+      "source": "glass-solar",
+      "text": "Solar cover glass is low in iron, and ordinary limestone and dolomite can carry too much, so purity matters."
+    },
+    {
+      "from": "magnesium",
+      "to": "motion",
+      "source": "usgs-magnesium",
+      "text": "Most primary magnesium goes into castings, mainly for vehicles."
+    }
+  ]
+}

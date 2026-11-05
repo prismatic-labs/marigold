@@ -1,0 +1,69 @@
+---
+import "../styles/global.css";
+import { t } from "../lib/copy";
+
+interface Props {
+  /** Path after the site root, such as "" or "sources/". */
+  path?: string;
+  title?: string;
+}
+
+const { path = "", title } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const canonical = new URL(`${base}/${path}`, Astro.site).href;
+const pageTitle = title ? `${title} | ${t.brand}` : t.htmlTitle;
+const ogImage = new URL(`${base}/og.png`, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={t.description} />
+    <meta name="theme-color" content="#f7f6f2" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marigold by Prismatic Labs" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={t.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+  </head>
+  <body>
+    <header class="site-head wrap">
+      <a class="wordmark" href={`${base}/`}>
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <g fill="#e07b00"><circle cx="16" cy="5.5" r="4.2" /><circle cx="23.4" cy="8.6" r="4.2" /><circle cx="26.5" cy="16" r="4.2" /><circle cx="23.4" cy="23.4" r="4.2" /><circle cx="16" cy="26.5" r="4.2" /><circle cx="8.6" cy="23.4" r="4.2" /><circle cx="5.5" cy="16" r="4.2" /><circle cx="8.6" cy="8.6" r="4.2" /></g>
+          <circle cx="16" cy="16" r="8" fill="#f2b233" /><circle cx="16" cy="16" r="3.4" fill="#8a4600" />
+        </svg>
+        {t.brand}
+      </a>
+      <nav class="site-nav" aria-label={t.navLabel}>
+        <a href={`${base}/`} aria-current={path === "" ? "page" : undefined}>{t.navSupply}</a>
+        <a href={`${base}/sources/`} aria-current={path === "sources/" ? "page" : undefined}>{t.sources}</a>
+      </nav>
+    </header>
+    <main class="wrap"><slot /></main>
+    <footer class="site-foot wrap">
+      <div>
+        <p>{t.footerLine}</p>
+        <nav>
+          <a href={`${base}/sources/`}>{t.sources}</a>
+          <a href={`${base}/sources/#data`}>{t.data}</a>
+        </nav>
+      </div>
+      <a class="brand" href="https://prismaticlabs.ai" target="_blank" rel="noopener noreferrer">
+        <img src={`${base}/prismatic-logo.svg`} alt="Prismatic Labs" width="156" height="56" decoding="async" />
+      </a>
+    </footer>
+    <style>
+      .brand { display: inline-block; flex-shrink: 0; line-height: 0; opacity: 0.92; }
+      .brand:hover { opacity: 1; }
+      .brand img { display: block; height: 56px; width: auto; max-width: 200px; object-fit: contain; }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+{
+  "note": "Production and value are the Indian Bureau of Mines' provisional 2022-23 figures for Chhattisgarh (Indian Minerals Yearbook 2023). Value is in thousand rupees and excludes fuel minerals, so coal has no value here. Districts are the ones the Bureau names, using its older district names, joined to the 2021 map through the `via` notes. A filled district means the Bureau names it for that mineral. It does not locate a mine.",
+  "allNonFuelValueThousand": 194328212,
+  "source": "imyb-2023",
+  "list": [
+    {
+      "id": "iron-ore",
+      "symbol": "Fe",
+      "accent": "#a64f33",
+      "name": "Iron ore",
+      "kind": "Haematite",
+      "quantity": {
+        "value": 42.546,
+        "unit": "Mt"
+      },
+      "valueThousand": 169935753,
+      "districts": [
+        "bastar",
+        "dantewada",
+        "kanker",
+        "rajnandgaon",
+        "balod"
+      ],
+      "via": {
+        "balod": "the Bureau says Dalli-Rajhara, Durg. Dalli-Rajhara is in Balod district today."
+      }
+    },
+    {
+      "id": "coal",
+      "symbol": "C",
+      "accent": "#39413d",
+      "name": "Coal",
+      "kind": "Fossil fuel",
+      "quantity": {
+        "value": 184.895,
+        "unit": "Mt"
+      },
+      "valueThousand": null,
+      "districts": [
+        "korba",
+        "raigarh",
+        "surguja"
+      ],
+      "via": {}
+    },
+    {
+      "id": "tin",
+      "symbol": "Sn",
+      "accent": "#6f7771",
+      "name": "Tin",
+      "kind": "Metal",
+      "quantity": {
+        "value": 45.429,
+        "unit": "t"
+      },
+      "valueThousand": 51850,
+      "districts": [
+        "bastar",
+        "dantewada"
+      ],
+      "via": {}
+    },
+    {
+      "id": "bauxite",
+      "symbol": "Al",
+      "accent": "#bb704f",
+      "name": "Bauxite",
+      "kind": "Aluminium ore",
+      "quantity": {
+        "value": 1.057,
+        "unit": "Mt"
+      },
+      "valueThousand": 1252140,
+      "districts": [
+        "bastar",
+        "bilaspur",
+        "dantewada",
+        "jashpur",
+        "kanker",
+        "kabirdham",
+        "korba",
+        "raigarh",
+        "surguja"
+      ],
+      "via": {}
+    },
+    {
+      "id": "limestone",
+      "symbol": "CaCO₃",
+      "accent": "#aa987d",
+      "name": "Limestone",
+      "kind": "Sedimentary rock",
+      "quantity": {
+        "value": 44.735,
+        "unit": "Mt"
+      },
+      "valueThousand": 12753977,
+      "districts": [
+        "bastar",
+        "bilaspur",
+        "durg",
+        "janjgir-champa",
+        "kabirdham",
+        "raigarh",
+        "raipur",
+        "rajnandgaon"
+      ],
+      "via": {}
+    },
+    {
+      "id": "dolomite",
+      "symbol": "CaMg(CO₃)₂",
+      "accent": "#847b70",
+      "name": "Dolomite",
+      "kind": "Carbonate mineral",
+      "quantity": null,
+      "valueThousand": null,
+      "districts": [
+        "bastar",
+        "bilaspur",
+        "durg",
+        "janjgir-champa",
+        "raigarh",
+        "raipur"
+      ],
+      "via": {}
+    }
+  ]
+}

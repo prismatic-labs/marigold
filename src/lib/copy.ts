@@ -1,0 +1,28 @@
+export const t = {
+  brand: "Marigold",
+  htmlTitle: "Marigold: Chhattisgarh could turn its minerals into deep tech",
+  description: "Chhattisgarh's mineral supply chains, from the ground towards deep tech: what's here now, what could be built and the key considerations.",
+  navLabel: "Main menu",
+  navSupply: "Supply chain",
+  sources: "Sources",
+  data: "Download the data",
+  footerLine: "Built from public records. Check them before you rely on them.",
+
+  groundTitle: "Where it is, and what it can become",
+  groundSub: "Pick a mineral.",
+  mineralNotes: {
+    "iron-ore": "Not on the EU's or India's critical list.",
+    coal: "The EU lists only coking coal. About 0.5% of Chhattisgarh's coal resources are coking grades.",
+    tin: "On India's critical list, not the EU's. Chhattisgarh is India's sole producer of tin concentrates.",
+    bauxite: "On the EU's critical list, not on India's list of 30.",
+    limestone: "Not on the EU's or India's critical list.",
+    dolomite: "Not on the EU's or India's critical list. The EU lists magnesium, but the two are not joined here.",
+  },
+  mapTitle: "Where it's found",
+  mapNote: "A filled district means the Indian Bureau of Mines names it, using its older district names. It does not locate a mine. The map shows 2021 boundaries, so five districts created in 2022 are not drawn.",
+  flowTitle: "What it can become",
+  flowNote: "General industry links. They do not show where Chhattisgarh's ore actually goes.",
+  flowHeads: { mineral: "Mineral", material: "Made into", use: "Ends up in" },
+  inState: "Made in Chhattisgarh today",
+  linksTitle: "Why each link",
+} as const;

@@ -1,0 +1,32 @@
+{
+  "name": "marigold",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "predev": "npm run sync:data",
+    "dev": "astro dev",
+    "prebuild": "npm run sync:data",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "check": "astro check",
+    "sync:data": "node scripts/sync-public-data.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource/mukta": "^5.3.0",
+    "astro": "^7.4.5",
+    "d3-geo": "^3.1.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/d3-geo": "^3.1.1",
+    "@types/geojson": "^7946.0.16",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.0"
+  }
+}

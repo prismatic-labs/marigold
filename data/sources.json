@@ -1,0 +1,467 @@
+{
+  "note": "Every figure and link on the site points to one of these. Accessed 4 November 2026.",
+  "list": [
+    {
+      "id": "ibm-state-2022",
+      "group": "minerals",
+      "title": "Indian Minerals Yearbook 2022, State Reviews: Chhattisgarh",
+      "org": "Indian Bureau of Mines",
+      "url": "https://ibm.gov.in/writereaddata/files/1732534836674462340a9785_Chhattisgarh_IMYB_2022.pdf"
+    },
+    {
+      "id": "coal-directory",
+      "group": "minerals",
+      "title": "Coal Directory of India, chapter 1",
+      "org": "Coal Directory",
+      "url": "https://coal.gov.in/sites/default/files/2026-03/coaldirchap1-180326.pdf"
+    },
+    {
+      "id": "eu-annex-ii",
+      "group": "minerals",
+      "title": "Critical Raw Materials Act, Annex II",
+      "org": "EU CRMA",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1252/oj"
+    },
+    {
+      "id": "india-critical",
+      "group": "minerals",
+      "title": "Critical Minerals for India",
+      "org": "Ministry of Mines",
+      "url": "https://mines.gov.in/admin/storage/app/uploads/649d4212cceb01688027666.pdf"
+    },
+    {
+      "id": "geoboundaries",
+      "group": "minerals",
+      "title": "India ADM2 boundaries, 2021. ODbL 1.0",
+      "org": "geoBoundaries",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/IND/ADM2/"
+    },
+    {
+      "id": "usgs-iron-ore",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Iron ore",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-iron-ore.pdf"
+    },
+    {
+      "id": "usgs-iron-steel",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Iron and steel",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-iron-steel.pdf"
+    },
+    {
+      "id": "usgs-tin",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Tin",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tin.pdf"
+    },
+    {
+      "id": "usgs-tin-myb",
+      "group": "flow",
+      "title": "Minerals Yearbook 2021: Tin",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/myb/vol1/2021/myb1-2021-tin.pdf"
+    },
+    {
+      "id": "usgs-gallium",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Gallium",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf"
+    },
+    {
+      "id": "usgs-bauxite",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Bauxite and alumina",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-bauxite-alumina.pdf"
+    },
+    {
+      "id": "usgs-aluminum",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Aluminum",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-aluminum.pdf"
+    },
+    {
+      "id": "usgs-magnesium",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Magnesium metal",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-magnesium-metal.pdf"
+    },
+    {
+      "id": "usgs-lime",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Lime",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lime.pdf"
+    },
+    {
+      "id": "usgs-cement",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Cement",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cement.pdf"
+    },
+    {
+      "id": "usgs-silicon",
+      "group": "flow",
+      "title": "Mineral Commodity Summaries 2026: Silicon",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silicon.pdf"
+    },
+    {
+      "id": "doe-magnets",
+      "group": "flow",
+      "title": "Neodymium magnets: supply chain report",
+      "org": "US DOE",
+      "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final.pdf"
+    },
+    {
+      "id": "iea-lfp",
+      "group": "flow",
+      "title": "Global EV Outlook 2026: electric vehicle batteries",
+      "org": "International Energy Agency",
+      "url": "https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries"
+    },
+    {
+      "id": "iea-energy-supply",
+      "group": "flow",
+      "title": "Energy and AI: energy supply for AI",
+      "org": "International Energy Agency",
+      "url": "https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai"
+    },
+    {
+      "id": "iea-energy-demand",
+      "group": "flow",
+      "title": "Energy and AI: energy demand from AI",
+      "org": "International Energy Agency",
+      "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai"
+    },
+    {
+      "id": "tata-needle-coke",
+      "group": "flow",
+      "title": "Conversion of coal tar into needle coke for graphite electrode and Li-ion battery",
+      "org": "AIChE, Tata Steel",
+      "url": "https://proceedings.aiche.org/conferences/aiche-spring-meeting-and-global-congress-on-process-safety/2024/proceeding/paper/60c-conversion-coal-tar-needle-coke-utilization-graphite-electrode-li-ion-battery"
+    },
+    {
+      "id": "posco-anode",
+      "group": "flow",
+      "title": "Needle coke and artificial graphite anodes",
+      "org": "POSCO Future M",
+      "url": "https://www.poscofuturem.com/en/business/chemical.do"
+    },
+    {
+      "id": "silicon-carbon",
+      "group": "flow",
+      "title": "How silicon metal is made",
+      "org": "ChemAnalyst",
+      "url": "https://www.chemanalyst.com/Blogs/how-silicon-metal-is-made-from-quartz-to-high-tech-applications-25"
+    },
+    {
+      "id": "euv-tin",
+      "group": "flow",
+      "title": "13.5 nm light from laser-driven tin microdroplet plasma",
+      "org": "Vrije Universiteit Amsterdam",
+      "url": "https://research.vu.nl/en/publications/production-of-135-nm-light-with-5-conversion-efficiency-from-2-%CE%BC-/"
+    },
+    {
+      "id": "glass-batch",
+      "group": "flow",
+      "title": "How we make glass: the chemistry of glass",
+      "org": "Pilkington",
+      "url": "https://www.pilkington.com/en-gb/united-kingdom/knowledge-hub-selection/architectural-and-technical-glass-knowledge-hub/learn-about-glass-technology/chemistry-of-glass"
+    },
+    {
+      "id": "glass-solar",
+      "group": "flow",
+      "title": "High transmittance glass",
+      "org": "US Patent 8,664,132",
+      "url": "https://patents.google.com/patent/US8664132"
+    },
+    {
+      "id": "gtk-magnesium",
+      "group": "flow",
+      "title": "Critical metal report: magnesium metal",
+      "org": "GTK Finland",
+      "url": "https://www.gtk.fi/app/uploads/2023/09/Critical_metal_report_Mg_metal.pdf"
+    },
+    {
+      "id": "power-electrical-steel",
+      "group": "flow",
+      "title": "US power sector flags a critical electrical steel crunch",
+      "org": "POWER magazine",
+      "url": "https://www.powermag.com/u-s-power-sector-trade-groups-flag-critical-electrical-steel-crunch/"
+    },
+    {
+      "id": "flower-wiki",
+      "group": "name",
+      "title": "List of Indian state symbols: Chhattisgarh",
+      "org": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/List_of_Indian_state_symbols"
+    },
+    {
+      "id": "ibm-iron-2022",
+      "group": "supply",
+      "title": "Indian Minerals Yearbook 2022: Iron ore",
+      "org": "Indian Bureau of Mines",
+      "url": "https://ibm.gov.in/writereaddata/files/17125794946613e3a6b3a5dIron_ore_2022.pdf"
+    },
+    {
+      "id": "ibm-tin-2022",
+      "group": "supply",
+      "title": "Indian Minerals Yearbook 2022: Tin",
+      "org": "Indian Bureau of Mines",
+      "url": "https://ibm.gov.in/writereaddata/files/170989614565eaf1d199b48Tin_2022.pdf"
+    },
+    {
+      "id": "imyb-2023",
+      "group": "supply",
+      "title": "Indian Minerals Yearbook 2023, including the Chhattisgarh state review and tin chapter",
+      "org": "Indian Bureau of Mines",
+      "url": "https://ibm.gov.in/writereaddata/files/17454767536809dc9139ba8IMYB_BOOK_2023.pdf"
+    },
+    {
+      "id": "usgs-graphite",
+      "group": "supply",
+      "title": "Mineral Commodity Summaries 2026: Graphite",
+      "org": "USGS",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf"
+    },
+    {
+      "id": "nmdc-steel",
+      "group": "supply",
+      "title": "NMDC Steel surpasses 2 million tonnes of hot metal",
+      "org": "The Statesman",
+      "url": "https://www.thestatesman.com/business/nmdc-steel-surpasses-2-million-tonne-hot-metal-production-closes-fy25-on-a-high-note-1503416593.html"
+    },
+    {
+      "id": "crgo-gtri",
+      "group": "supply",
+      "title": "CRGO steel shortage poses threat to India's power sector",
+      "org": "Outlook Business, reporting GTRI",
+      "url": "https://www.outlookbusiness.com/industry/crgo-steel-shortage-poses-threat-to-indias-power-sector-expansion-plans-warns-gtri"
+    },
+    {
+      "id": "eu-cbam",
+      "group": "supply",
+      "title": "Carbon Border Adjustment Mechanism",
+      "org": "European Commission",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en"
+    },
+    {
+      "id": "cbam-gtri",
+      "group": "supply",
+      "title": "EU's carbon tax to impact India's metal exports",
+      "org": "Outlook Business, reporting GTRI",
+      "url": "https://www.outlookbusiness.com/news/eu-s-carbon-tax-to-impact-india-s-metal-exports-gtri-news-266391"
+    },
+    {
+      "id": "dep13-stay",
+      "group": "supply",
+      "title": "Chhattisgarh CM stays mining activities in Bailadila",
+      "org": "Down To Earth",
+      "url": "https://www.downtoearth.org.in/news/mining/chhattisgarh-cm-stays-mining-activities-in-bailadila-65028"
+    },
+    {
+      "id": "dep13-scroll",
+      "group": "supply",
+      "title": "Deposit 13 and the Hiroli Gram Sabha enquiry",
+      "org": "Scroll.in",
+      "url": "https://scroll.in/article/938171/scroll_in"
+    },
+    {
+      "id": "ntpc-korba",
+      "group": "supply",
+      "title": "NTPC Korba press meet, 2,600 MW station",
+      "org": "Industrial Punch, quoting NTPC Korba",
+      "url": "https://www.industrialpunch.com/?p=108174"
+    },
+    {
+      "id": "rackbank-dcd",
+      "group": "supply",
+      "title": "RackBank breaks ground on data centre campus in central India",
+      "org": "Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/rackbank-breaks-ground-on-data-center-campus-in-central-india/"
+    },
+    {
+      "id": "rackbank-tracker",
+      "group": "supply",
+      "title": "RackBank Nava Raipur listing",
+      "org": "Data Center Map",
+      "url": "https://www.datacentermap.com/india/raipur/rackbank-nava-raipur/"
+    },
+    {
+      "id": "hasdeo-2026",
+      "group": "supply",
+      "title": "Protests erupt over mining in Hasdeo Arand",
+      "org": "Devdiscourse",
+      "url": "https://www.devdiscourse.com/article/entertainment/3772440-protests-erupt-over-mining-in-chhattisgarhs-hasdeo-arand"
+    },
+    {
+      "id": "hasdeo-2025",
+      "group": "supply",
+      "title": "NACEJ slams clearance for Kente coal extension",
+      "org": "Counterview, advocacy statement",
+      "url": "https://www.counterview.net/2025/08/nacej-slams-clearance-for-kente-coal.html?hl=en_IN"
+    },
+    {
+      "id": "tin-deposits",
+      "group": "supply",
+      "title": "Chhattisgarh gives the Centre reports on three tin deposits",
+      "org": "TMI, carrying PTI",
+      "url": "https://www.taxtmi.com/news?id=40674"
+    },
+    {
+      "id": "outlook-critical",
+      "group": "supply",
+      "title": "Chhattisgarh eyes larger role in India's critical minerals supply chain",
+      "org": "Outlook",
+      "url": "https://www.outlookindia.com/national/chhattisgarh-eyes-larger-role-in-indias-critical-minerals-supply-chain"
+    },
+    {
+      "id": "hitavada-value-chain",
+      "group": "supply",
+      "title": "C'garh targets full mineral value chain: CM",
+      "org": "The Hitavada",
+      "url": "https://www.thehitavada.com//Encyc/2026/9/1/cgarh-targets-full-mineral-value-chain-cm.html"
+    },
+    {
+      "id": "eu-conflict-minerals",
+      "group": "supply",
+      "title": "Regulation (EU) 2017/821: conflict minerals due diligence",
+      "org": "EU",
+      "url": "https://eur-lex.europa.eu/eli/reg/2017/821/oj"
+    },
+    {
+      "id": "balco-2025",
+      "group": "supply",
+      "title": "BALCO produces first metal from India's largest smelter",
+      "org": "Outlook Business",
+      "url": "https://www.outlookbusiness.com/corporate/balco-produces-1st-metal-from-indias-largest-smelter-set-to-enter-million-tonne-club"
+    },
+    {
+      "id": "polymatech-foundation",
+      "group": "supply",
+      "title": "Foundation stone for India's first GaN-based semiconductor plant laid in Raipur",
+      "org": "The Week, carrying PTI",
+      "url": "https://www.theweek.in/wire-updates/business/2025/04/11/dcm46-biz-cg-semiconductor-plant.html"
+    },
+    {
+      "id": "polymatech-target",
+      "group": "supply",
+      "title": "First ultra-edge semiconductor plant to come up in Chhattisgarh",
+      "org": "Deccan Chronicle",
+      "url": "https://www.deccanchronicle.com/nation/countrys-first-ultra-edge-tech-based-semiconductor-plant-to-come-up-in-chhattisgarh-1872399"
+    },
+    {
+      "id": "nalco-gallium",
+      "group": "supply",
+      "title": "NALCO bets on value-added alumina and aluminium",
+      "org": "AL Circle",
+      "url": "https://www.alcircle.com/news/nalco-bets-on-value-added-alumina-aluminium-to-capture-surging-demand-115276"
+    },
+    {
+      "id": "iai-bauxite",
+      "group": "supply",
+      "title": "Updated sustainable bauxite guidelines",
+      "org": "Mining Weekly, reporting the International Aluminium Institute",
+      "url": "https://www.miningweekly.com/article/updated-ssustainable-bauxite-guidelines-launched-to-build-industry-sustainability-2022-02-15"
+    },
+    {
+      "id": "katghora",
+      "group": "supply",
+      "title": "India's first lithium mine in Korba: drilling underway",
+      "org": "ETV Bharat",
+      "url": "https://www.etvbharat.com/en/state/countrys-first-lithium-mine-in-korba-to-become-operational-soon-drilling-underway-enn25111601802"
+    },
+    {
+      "id": "katghora-ken",
+      "group": "supply",
+      "title": "Inside the lithium rush",
+      "org": "The Ken",
+      "url": "https://the-ken.com/story/inside-the-lithium-rush-can-bidders-strike-gold-in-the-race-to-mine/"
+    },
+    {
+      "id": "bastar-declared",
+      "group": "supply",
+      "title": "Bastar is now Naxal-free: Amit Shah",
+      "org": "ANI",
+      "url": "https://aninews.in/news/national/general-news/bastar-is-now-naxal-free-developed-india-by-2047-remains-incomplete-without-a-developed-bastar-amit-shah20260518210410/"
+    },
+    {
+      "id": "bastar-demining",
+      "group": "supply",
+      "title": "Bastar Naxal-free: focus shifts to de-mining and development",
+      "org": "New Kerala",
+      "url": "https://www.newkerala.com/news/a/bastar-free-from-naxal-activities-ig-sundarraj-terms-898.htm"
+    },
+    {
+      "id": "dep13-resume",
+      "group": "supply",
+      "title": "Six days on, operations resume at iron ore mines in Bailadila",
+      "org": "India Environment Portal",
+      "url": "https://indiaenvironmentportal.org.in/news-clippings/six-days-on-operations-resume-at-iron-ore-mines-in-chhattisgarhs-bailadila"
+    },
+    {
+      "id": "rackbank-site",
+      "group": "supply",
+      "title": "RackBank Raipur campus",
+      "org": "RackBank",
+      "url": "https://www.rackbank.com/ai-datacenters/raipur.html"
+    },
+    {
+      "id": "auctions-cancelled",
+      "group": "supply",
+      "title": "Govt scraps 9 critical mineral blocks auction citing poor investor response",
+      "org": "Business Standard",
+      "url": "https://www.business-standard.com/industry/news/govt-scraps-9-critical-mineral-blocks-auction-citing-poor-investor-response-126070500149_1.html"
+    },
+    {
+      "id": "mines-tranche-8",
+      "group": "supply",
+      "title": "20 critical and strategic mineral blocks under Tranche VIII",
+      "org": "Ministry of Mines",
+      "url": "https://mines.gov.in/webportal/content/ongoing-nits-critical-minerals"
+    },
+    {
+      "id": "mstc-nit-8",
+      "group": "supply",
+      "title": "Notice inviting tender, Tranche VIII, with blocks and reserve prices",
+      "org": "Ministry of Mines notice",
+      "url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=27316_GoI%20MoM%20-%20Tranche%20VIII%20-%20NIT.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-"
+    },
+    {
+      "id": "mstc-nit-6",
+      "group": "supply",
+      "title": "Notice inviting tender, Tranche VI, with blocks and districts",
+      "org": "Ministry of Mines notice",
+      "url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=22681_GoI%20MoM%20-%20Tranche%20VI%20-%20NIT.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-"
+    },
+    {
+      "id": "mstc-critical-results",
+      "group": "supply",
+      "title": "Critical mineral block auction results: choose a tranche on the form",
+      "org": "MSTC critical mineral results",
+      "url": "https://www.mstcecommerce.com/auctionhome/mlcln/mineral_auction_result.jsp?sellerRefId=31608"
+    },
+    {
+      "id": "mstc-state-results",
+      "group": "supply",
+      "title": "Major mineral block auction results: choose a state and year on the form",
+      "org": "MSTC state results",
+      "url": "https://www.mstcecommerce.com/auctionhome/mlcln/mineral_auction_result.jsp?sellerRefId=0"
+    },
+    {
+      "id": "iea-energy-summary",
+      "group": "supply",
+      "title": "Energy and AI: executive summary",
+      "org": "International Energy Agency",
+      "url": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+    }
+  ]
+}

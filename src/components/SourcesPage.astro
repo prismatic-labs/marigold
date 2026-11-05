@@ -1,0 +1,84 @@
+---
+import { sources } from "../lib/data";
+import Layout from "./Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const groups = [
+  { id: "supply", title: "Supply chain" },
+  { id: "flow", title: "Links from minerals to technology" },
+  { id: "minerals", title: "Minerals and map" },
+];
+const levels = [
+  { name: "Official record", what: "A government, regulator or audited document. Figures are typed from the original and checked." },
+  { name: "Reported", what: "A news report, company statement or trade source. It is named next to the fact, so you can judge it." },
+  { name: "Industry link", what: "General knowledge of what a mineral can become. It does not show where Chhattisgarh's ore went." },
+  { name: "Not found", what: "We found no public record. That is not proof that none exists." },
+];
+const gaps = [
+  "This is version 0. Nobody with local industry knowledge has reviewed the \"not found\" cells yet, so some plants may be missing.",
+  "State-level production figures are provisional 2022-23 numbers, and resources are as of April 2020. We did not find anything newer.",
+  "We could not confirm that the Nava Raipur chip plant or AI park is operating. Reports and trackers differ.",
+  "MSTC's results page listed 8 of the 20 Tranche VIII blocks on 5 November 2026. Gurur is listed. Gohirapali, Sabag (North), Sambalpur and Karahibhadar are not, and the page does not say why.",
+  "MSTC's results tables give no unit for the final price offer, so the list of 18 preferred bidders leaves offers out. The tender notice gives Gurur's reserve price as a percentage.",
+  "The April 2025 report puts the three tin deposits in Dantewada, Sukma and Bastar districts without naming them. Chittalnar-Kumakoleng is in Sukma and Bastar, so it may be one of the three. We found no record that says so.",
+  "Cement has no onward link in the diagram, because we found no suitable source for its use in data centres. Some other links rest on news, patent or trade sources, as listed below.",
+  "The US Geological Survey's text says China makes 82% of natural graphite, while its table gives 78%. We use the table, as we do for the other shares.",
+  "The map uses 2021 boundaries. Five districts created in 2022 are not drawn separately.",
+];
+const datasets = ["supply", "flow", "minerals", "districts", "sources"];
+const flower = sources.find((s) => s.id === "flower-wiki")!;
+---
+
+<Layout path="sources/" title="Sources">
+  <section>
+    <h1 class="title">Sources</h1>
+    <p class="lede">Every figure here comes from a public document. Every document is listed below, and so is everything that does not add up.</p>
+    <dl class="levels">
+      {levels.map((l) => <div><dt>{l.name}</dt><dd>{l.what}</dd></div>)}
+    </dl>
+  </section>
+
+  <section id="gaps">
+    <h2>What does not add up, or is not known</h2>
+    <ol>{gaps.map((g) => <li>{g}</li>)}</ol>
+  </section>
+
+  <section id="data">
+    <h2>Download the data</h2>
+    <p class="downloads">{datasets.map((d) => <a href={`${base}/data/${d}.json`}>{d}.json</a>)}</p>
+    <p class="cite">Code is MIT licensed. Map boundaries are ODbL 1.0.</p>
+  </section>
+
+  {
+    groups.map((g) => (
+      <section id={g.id}>
+        <h2>{g.title}</h2>
+        <ul>
+          {sources.filter((s) => s.group === g.id).map((s) => (
+            <li><a href={s.url}>{s.title}</a> <span class="cite">{s.org}</span></li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+
+  <section id="name">
+    <h2>Why this name</h2>
+    <p class="body">
+      Chandaini gonda, the French marigold (Tagetes patula), is listed in reference works as Chhattisgarh's state flower. We found no government notification, and some lists name other flowers.
+      {" "}<a href={flower.url}>{flower.org}</a>
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .title { font-size: clamp(2.2rem, 8vw, 3.6rem); }
+  .levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.25rem 2rem; margin: 1.5rem 0 0; }
+  dt { font-weight: 800; }
+  dd { margin: 0.1rem 0 0; color: var(--muted); }
+  ol, ul { margin: 0.75rem 0 0; padding-left: 1.25rem; max-width: 46rem; }
+  li { margin-top: 0.35rem; }
+  .downloads { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin-top: 0.75rem; font-weight: 600; }
+  .cite { display: inline; }
+  .body { margin-top: 0.75rem; max-width: 46rem; }
+</style>

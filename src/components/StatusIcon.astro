@@ -1,0 +1,22 @@
+---
+/** Shape carries the meaning as well as colour, so status never depends on colour alone. */
+const { status } = Astro.props as { status: "available" | "possible" | "notfound" | "risky" };
+---
+
+<svg class="status" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+  {status === "available" && <circle cx="8" cy="8" r="6.5" fill="#2e8b57" />}
+  {
+    status === "possible" && (
+      <>
+        <circle cx="8" cy="8" r="5.75" fill="none" stroke="#b87400" stroke-width="1.5" />
+        <path d="M8 2.25a5.75 5.75 0 0 0 0 11.5z" fill="#b87400" />
+      </>
+    )
+  }
+  {status === "notfound" && <circle cx="8" cy="8" r="5.75" fill="none" stroke="#8a857a" stroke-width="1.5" stroke-dasharray="2.5 2" />}
+  {status === "risky" && <path d="M8 1.5L14.5 8 8 14.5 1.5 8z" fill="#44505a" />}
+</svg>
+
+<style>
+  .status { display: inline-block; flex-shrink: 0; vertical-align: -0.12em; }
+</style>

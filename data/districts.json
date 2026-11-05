@@ -1,0 +1,147 @@
+{
+  "note": "33 current districts. `shape` is the geoBoundaries 2021 name where it differs. `parent` is where a district created in 2022 still sits on the 2021 map.",
+  "list": [
+    {
+      "id": "balod",
+      "name": "Balod"
+    },
+    {
+      "id": "baloda-bazar",
+      "name": "Baloda Bazar"
+    },
+    {
+      "id": "balrampur",
+      "name": "Balrampur"
+    },
+    {
+      "id": "bastar",
+      "name": "Bastar"
+    },
+    {
+      "id": "bemetara",
+      "name": "Bemetara",
+      "shape": "Bemetra"
+    },
+    {
+      "id": "bijapur",
+      "name": "Bijapur"
+    },
+    {
+      "id": "bilaspur",
+      "name": "Bilaspur"
+    },
+    {
+      "id": "dantewada",
+      "name": "Dantewada",
+      "shape": "Dakshin Bastar Dantewada"
+    },
+    {
+      "id": "dhamtari",
+      "name": "Dhamtari"
+    },
+    {
+      "id": "durg",
+      "name": "Durg"
+    },
+    {
+      "id": "gariaband",
+      "name": "Gariaband"
+    },
+    {
+      "id": "gaurela-pendra-marwahi",
+      "name": "Gaurela-Pendra-Marwahi",
+      "shape": "Gaurella Pendra Marwahi"
+    },
+    {
+      "id": "janjgir-champa",
+      "name": "Janjgir-Champa"
+    },
+    {
+      "id": "jashpur",
+      "name": "Jashpur"
+    },
+    {
+      "id": "kabirdham",
+      "name": "Kabirdham",
+      "shape": "Kabeerdham"
+    },
+    {
+      "id": "kanker",
+      "name": "Kanker",
+      "shape": "Uttar Bastar Kanker"
+    },
+    {
+      "id": "khairagarh-chhuikhadan-gandai",
+      "name": "Khairagarh-Chhuikhadan-Gandai",
+      "parent": "rajnandgaon"
+    },
+    {
+      "id": "kondagaon",
+      "name": "Kondagaon"
+    },
+    {
+      "id": "korba",
+      "name": "Korba"
+    },
+    {
+      "id": "koriya",
+      "name": "Koriya"
+    },
+    {
+      "id": "mahasamund",
+      "name": "Mahasamund"
+    },
+    {
+      "id": "manendragarh-chirmiri-bharatpur",
+      "name": "Manendragarh-Chirmiri-Bharatpur",
+      "parent": "koriya"
+    },
+    {
+      "id": "mohla-manpur-ambagarh-chowki",
+      "name": "Mohla-Manpur-Ambagarh Chowki",
+      "parent": "rajnandgaon"
+    },
+    {
+      "id": "mungeli",
+      "name": "Mungeli"
+    },
+    {
+      "id": "narayanpur",
+      "name": "Narayanpur"
+    },
+    {
+      "id": "raigarh",
+      "name": "Raigarh"
+    },
+    {
+      "id": "raipur",
+      "name": "Raipur"
+    },
+    {
+      "id": "rajnandgaon",
+      "name": "Rajnandgaon"
+    },
+    {
+      "id": "sakti",
+      "name": "Sakti",
+      "parent": "janjgir-champa"
+    },
+    {
+      "id": "sarangarh-bilaigarh",
+      "name": "Sarangarh-Bilaigarh",
+      "parent": "raigarh"
+    },
+    {
+      "id": "sukma",
+      "name": "Sukma"
+    },
+    {
+      "id": "surajpur",
+      "name": "Surajpur"
+    },
+    {
+      "id": "surguja",
+      "name": "Surguja"
+    }
+  ]
+}
